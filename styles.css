@@ -310,6 +310,26 @@ h3 {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(248, 223, 220, 0.58));
 }
 
+.dress-code-card {
+  position: relative;
+  overflow: hidden;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: clamp(30px, 6vw, 62px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.dress-code-card p {
+  color: rgba(59, 52, 46, 0.76);
+}
+
+.dress-code-section {
+  background: linear-gradient(180deg, transparent, rgba(216, 221, 211, 0.36));
+}
+
 .story-section {
   overflow: hidden;
 }
