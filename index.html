@@ -9,13 +9,19 @@
       content="Свадебное приглашение Никиты и Иветты на 12 сентября 2026 года."
     />
     <title>Никита &amp; Иветта | Свадебное приглашение</title>
-    <link rel="preload" as="image" href="assets/images/horizontal_we_2.jpg" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700&family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="./assets/images/horizontal_we_2.jpg" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header" aria-label="Основная навигация">
-      <a class="brand" href="#top" aria-label="К началу страницы">Н &amp; И</a>
-      <nav class="main-nav">
+      <a class="site-logo" href="#hero" aria-label="Никита и Иветта"><span>Н&amp;И</span></a>
+      <nav class="site-nav">
         <a href="#story">История</a>
         <a href="#schedule">Расписание</a>
         <a href="#wishes">Пожелания</a>
@@ -24,9 +30,9 @@
     </header>
 
     <main id="top">
-      <section class="hero" aria-label="Свадебное приглашение Никиты и Иветты">
+      <section class="hero" id="hero" aria-label="Свадебное приглашение Никиты и Иветты">
         <div class="hero__media" aria-hidden="true">
-          <img src="assets/images/horizontal_we_2.jpg" alt="" />
+          <img src="./assets/images/horizontal_we_2.jpg" alt="" />
         </div>
         <div class="hero__card reveal">
           <p class="eyebrow">Свадебное приглашение</p>
@@ -98,7 +104,7 @@
           </div>
           <div class="couple-grid">
             <article class="person-card reveal">
-              <img src="assets/images/vertical_me.jpg" alt="Никита" loading="lazy" />
+              <img class="person-card__photo person-card__photo--me" src="./assets/images/vertical_me.jpg" alt="Никита" loading="lazy" />
               <div>
                 <span>Он</span>
                 <h3>Никита</h3>
@@ -108,7 +114,7 @@
               </div>
             </article>
             <article class="person-card reveal">
-              <img src="assets/images/vertical_her.jpg" alt="Иветта" loading="lazy" />
+              <img src="./assets/images/vertical_her.jpg" alt="Иветта" loading="lazy" />
               <div>
                 <span>Она</span>
                 <h3>Иветта</h3>
@@ -124,7 +130,7 @@
       <section class="section wide-photo-section">
         <div class="container reveal">
           <figure class="wide-photo">
-            <img src="assets/images/horizontal_we.jpg" alt="Никита и Иветта вместе" loading="lazy" />
+            <img src="./assets/images/horizontal_we.jpg" alt="Никита и Иветта вместе" loading="lazy" />
             <figcaption>Каждый общий день становится частью большой истории.</figcaption>
           </figure>
         </div>
@@ -134,7 +140,7 @@
         <div class="container together-layout">
           <div class="together-photo reveal">
             <img
-              src="assets/images/vertical_we_5_mail.JPEG"
+              src="./assets/images/vertical_we_5_mail.JPEG"
               alt="Никита и Иветта держатся за руки"
               loading="lazy"
             />
@@ -155,22 +161,22 @@
           </div>
           <div class="gallery-grid">
             <figure class="gallery-item gallery-item--tall reveal">
-              <img src="assets/images/vertical_we.JPG" alt="Никита и Иветта дома" loading="lazy" />
+              <img src="./assets/images/vertical_we.JPG" alt="Никита и Иветта дома" loading="lazy" />
             </figure>
             <figure class="gallery-item reveal">
-              <img src="assets/images/cube_we.JPEG" alt="Нежный портрет пары" loading="lazy" />
+              <img src="./assets/images/cube_we.JPEG" alt="Нежный портрет пары" loading="lazy" />
             </figure>
             <figure class="gallery-item gallery-item--wide reveal">
-              <img src="assets/images/horizontal_we.jpg" alt="Зимняя прогулка Никиты и Иветты" loading="lazy" />
+              <img src="./assets/images/horizontal_we.jpg" alt="Зимняя прогулка Никиты и Иветты" loading="lazy" />
             </figure>
             <figure class="gallery-item reveal">
-              <img src="assets/images/vertical_we_3.jpg" alt="Никита и Иветта зимой" loading="lazy" />
+              <img class="gallery-item__photo gallery-item__photo--we-3" src="./assets/images/vertical_we_3.jpg" alt="Никита и Иветта зимой" loading="lazy" />
             </figure>
             <figure class="gallery-item reveal">
-              <img src="assets/images/vertical_we_4.jpg" alt="Никита и Иветта за ужином" loading="lazy" />
+              <img src="./assets/images/vertical_we_4.jpg" alt="Никита и Иветта за ужином" loading="lazy" />
             </figure>
             <figure class="gallery-item gallery-item--tall reveal">
-              <img src="assets/images/vetical_we_2.jpg" alt="Никита и Иветта с букетом" loading="lazy" />
+              <img src="./assets/images/vetical_we_2.jpg" alt="Никита и Иветта с букетом" loading="lazy" />
             </figure>
           </div>
         </div>
@@ -240,24 +246,25 @@
       </section>
 
       <section class="section rsvp-section" id="rsvp">
-        <div class="container rsvp-layout">
-          <div class="rsvp-copy reveal">
+        <div class="container">
+          <div class="section-header reveal">
             <p class="eyebrow">Анкета</p>
-            <h2>Подтвердите присутствие</h2>
+            <h2>Подтвердите присутствие</h2>            
             <p>
-              Пожалуйста, заполните небольшую форму, чтобы мы могли всё подготовить и разделить этот день
-              с вами как можно уютнее.
+              Пожалуйста, дайте нам знать о своём присутствии до 1 августа включительно.
+              После этой даты мы будем завершать подготовку и согласовывать финальные детали, чтобы наш день прошёл уютно и спокойно для всех гостей.
             </p>
           </div>
-          <div class="form-frame reveal">
+          <div class="form-frame rsvp-form-card reveal">
             <div class="rsvp-form">
-              <script src="https://forms.yandex.ru/_static/embed.js"></script>
               <iframe
                 src="https://forms.yandex.ru/u/6a270cc284227c5ff0be508b?iframe=1"
                 frameborder="0"
                 name="ya-form-6a270cc284227c5ff0be508b"
+                title="Форма подтверждения присутствия"
                 width="100%"
-                height="800">
+                height="800"
+                loading="lazy">
               </iframe>
               <a
                 class="button"
@@ -274,7 +281,7 @@
 
       <section class="final-section" aria-label="Финальное послание">
         <div class="container final-card reveal">
-          <img src="assets/images/cube_we.JPEG" alt="Никита и Иветта" loading="lazy" />
+          <img src="./assets/images/cube_we.JPEG" alt="Никита и Иветта" loading="lazy" />
           <p>С любовью,<br />Никита и Иветта</p>
         </div>
       </section>
@@ -294,6 +301,6 @@
       };
     </script>
     <script src="https://forms.yandex.ru/_static/embed.js"></script>
-    <script src="script.js" defer></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>

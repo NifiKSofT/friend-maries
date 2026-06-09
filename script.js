@@ -40,13 +40,21 @@ if ("IntersectionObserver" in window && !prefersReducedMotion.matches) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
+let isMapInitialized = false;
+
 function initWeddingMap() {
+  if (isMapInitialized) {
+    return;
+  }
+
   const config = window.WEDDING_MAP_CONFIG;
   const mapContainer = document.getElementById("wedding-map");
 
   if (!config || !mapContainer) {
     return;
   }
+
+  isMapInitialized = true;
 
   const latitude = Number(config.center?.[0]);
   const longitude = Number(config.center?.[1]);
@@ -90,5 +98,25 @@ function initWeddingMap() {
 
   document.head.appendChild(mapScript);
 }
+const mapContainer = document.getElementById("wedding-map");
 
-initWeddingMap();
+if (mapContainer && "IntersectionObserver" in window) {
+  const mapObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          initWeddingMap();
+          observer.disconnect();
+        }
+      });
+    },
+    {
+      rootMargin: "300px 0px",
+      threshold: 0.01,
+    },
+  );
+
+  mapObserver.observe(mapContainer);
+} else {
+  initWeddingMap();
+}
