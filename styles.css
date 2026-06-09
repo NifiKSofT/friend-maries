@@ -1391,7 +1391,6 @@ section {
 .rsvp-form iframe {
   display: block;
   width: 100%;
-  min-height: 780px;
   border: 0;
   border-radius: 24px;
   background: var(--paper-solid);
